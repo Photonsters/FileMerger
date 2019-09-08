@@ -53,7 +53,6 @@ The layout area will only allow placement of a source photon file (and show a re
 ![image](https://user-images.githubusercontent.com/11459480/64485761-c064d500-d224-11e9-96c5-f49090eabe2d.png)
 
 Use the load button to load all photon files you want to combine. On each load FileMerger will analyse the photonfile you selected and extract the 3D-model (voxel-area) in it.
-
 If you want to clear all models in the __File area__, use the new button: ![image](https://user-images.githubusercontent.com/11459480/64485767-c6f34c80-d224-11e9-8a06-6b459eda9672.png)
   
   
