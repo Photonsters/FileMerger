@@ -451,7 +451,7 @@ init()
 createWindow()
 createWindowLayout()
 
-readPhotonFile("test/cylinder and 20x20x20 sideways.photon")
+#readPhotonFile("test/cylinder and 20x20x20 sideways.photon")
 #readPhotonFile("test/20x20x20.photon")
 #readPhotonFile("test/bunny_small.photon")
 #readPhotonFile("test/cylinder.photon")
