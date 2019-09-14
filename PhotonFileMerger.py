@@ -282,7 +282,11 @@ def readPhotonFile(filename):
     xmin,ymin,xmax,ymax=9999,9999,0,0
     for layerNr in range(photonfile.layers.count()):
         im=photonfile.layers.get(layerNr,'n') # 2560 rows, 1440 cols; element is called im[y,x]
-        contours, hierarchy = cv2.findContours(im.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+        res=cv2.findContours(im.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+        # In the current OpenCV's master branch the return statements have changed, see http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=findcontours.
+        if len(res)==3: _,contours,hierarchy=res
+        if len(res)==2: contours,hierarchy=res
+        #contours, hierarchy = cv2.findContours(im.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
         idx = 0 
         for cnt in contours:
             idx += 1
