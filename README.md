@@ -24,7 +24,7 @@ __or__ install Anaconda 3.6 https://www.anaconda.com/download/
 3) Install the numpy and opencv libraries
    * type 'python -m pip install -U numpy --user'
    * type 'python -m pip install -U cv2 --user'
-   # type 'python -m pip install -U Pillow --user'
+   * type 'python -m pip install -U Pillow --user' 
 4) You have two options to run PhotonFileMerger:
    * from your file explorer find and run PhotonFileMerger.py 
    * from a dos prompt/linux terminal, navigate to the directory where you extracted the zip file and type 'phyton PhotonFileMerger.py' for windows or 'phyton3 PhotonFileMerger.py' for linux.
