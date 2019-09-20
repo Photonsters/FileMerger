@@ -26,7 +26,6 @@ __or__ install Anaconda 3.6 https://www.anaconda.com/download/
 
 3) Install the numpy and opencv libraries
    * type 'python -m pip install -U numpy --user'
-   * type 'python -m pip install -U cv2 --user'
    * type 'python -m pip install -U opencv-python --user'
    * type 'python -m pip install -U Pillow --user' 
    
