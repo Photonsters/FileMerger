@@ -15,14 +15,15 @@ FileMerger is alpha. There probably are bugs, the output files have not yet been
  ---
   
 ## Installation
-You can run FileMerger in Windows, OSX and Linux. There is no binary release so you have to install Python3
+You can run FileMerger in Windows, OSX(not tested) and Linux. Your OS must be 64 bit. 
+There is no binary release so you have to install Python3-64bit.
 
 0) Download the source code in zip or tar.gz.
 
-1) Install Python **3** from https://www.python.org/downloads/  
+1) Install Python **3**-**64bit** from https://www.python.org/downloads/  
 __or__ install Anaconda 3.6 https://www.anaconda.com/download/ 
 
-2) Check the python version is above 3 by typing in the command line 'python --version'
+2) Check if the python version is above 3 and 64 bit by typing in the command line 'python --version'
 
 3) Install the numpy and opencv libraries
    * type 'python -m pip install -U numpy --user'
@@ -33,7 +34,7 @@ __or__ install Anaconda 3.6 https://www.anaconda.com/download/
    * from your file explorer find and run PhotonFileMerger.py 
    * from a dos prompt/linux terminal, navigate to the directory where you extracted the zip file and type 'phyton PhotonFileMerger.py' for windows or 'phyton3 PhotonFileMerger.py' for linux.
 
-**Attention: PhotonFileMerger will not work with Python 2!** 
+**Attention: PhotonFileMerger will not work with Python 2 or in a 32 bit version of Python!** 
 
 ---
   
