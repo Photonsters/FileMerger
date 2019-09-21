@@ -159,18 +159,8 @@ def createWindowLayout():
 
 def mnSaveAs():
     global objects
-    
-    # call a dummy dialog with an impossible option to initialize the file
-    # dialog without really getting a dialog window; this will throw a
-    # TclError, so we need a try...except :    
-    try:
-        root.tk.call('tk_getOpenFile', '-foobarbaz')
-    except:
-        pass
-    root.tk.call('set', '::tk::dialog::file::showHiddenBtn', '1')
-    root.tk.call('set', '::tk::dialog::file::showHiddenVar', '0')
-        
     # Check if we got a filename
+    hideHiddenFilesInDialog()
     filename =  tkinter.filedialog.asksaveasfilename(initialdir = ".",title = "Select file",filetypes = (("photon files","*.photon"),("all files","*.*")))
     if not filename: return  
 
@@ -244,17 +234,19 @@ def mnSaveAs():
 
     outPhotonFile.save()
 
-def mnLoad():
-    global layerHeight
+def hideHiddenFilesInDialog():
     # call a dummy dialog with an impossible option to initialize the file
-    # dialog without really getting a dialog window; this will throw a
-    # TclError, so we need a try...except :    
+    # dialog without really getting a dialog window; this will throw a TclError, so we need a try...except :    
     try:
         root.tk.call('tk_getOpenFile', '-foobarbaz')
     except:
         pass
+    # set aatributes
     root.tk.call('set', '::tk::dialog::file::showHiddenBtn', '1')
     root.tk.call('set', '::tk::dialog::file::showHiddenVar', '0')
+def mnLoad():
+    global layerHeight
+    hideHiddenFilesInDialog()
     filename =  tkinter.filedialog.askopenfilename(initialdir = ".",title = "Select file",filetypes = (("photon files","*.photon"),("all files","*.*")))
     if not filename: return
     photonfile=readPhotonFile(filename)
