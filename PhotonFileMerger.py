@@ -242,8 +242,12 @@ def hideHiddenFilesInDialog():
     except:
         pass
     # set aatributes
-    root.tk.call('set', '::tk::dialog::file::showHiddenBtn', '1')
-    root.tk.call('set', '::tk::dialog::file::showHiddenVar', '0')
+    try:
+        root.tk.call('set', '::tk::dialog::file::showHiddenBtn', '1')
+        root.tk.call('set', '::tk::dialog::file::showHiddenVar', '0')
+    except:
+        pass
+        
 def mnLoad():
     global layerHeight
     hideHiddenFilesInDialog()
